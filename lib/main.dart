@@ -4,12 +4,20 @@ import "widgets/gender_box.dart";
 import "widgets/slider_box.dart";
 import "widgets/weight_and_age.dart";
 
+/// this is a custom color that we will use in our app
+/// if you want to change it later, you can change it from one place
 const customBackgroundColor = Color(0x8D8DAFF8);
 const customPrimaryColor = Color(0xFF0037AC);
 
 void main() {
+  /// [runApp] is a function that takes a widget and run it
+  /// as the root of the widget tree
   runApp(
+    /// [MaterialApp] is a widget that will hold our app
+    /// it will give us some features
     const MaterialApp(
+      /// [home] is a property that takes a widget
+      /// and it will be the first screen that the user will see
       home: MyApp(),
     ),
   );
@@ -18,9 +26,18 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
+
+  /// [build] method is the method that responsible for holding
+  /// the combination of widgets that creates the whole app
+  /// that we have seen in the UI ( Our Design )
   @override
   Widget build(BuildContext context) {
+    /// Here we choose to use a [Scaffold] widget
+    /// because it has cool features like:
+    /// appBar, body, bottomNavigationBar, floatingActionButton, etc
     return Scaffold(
+
       //* This is the appBar ( Top of the App )
       appBar: AppBar(
         title: const Text("BMI Calculator"),
